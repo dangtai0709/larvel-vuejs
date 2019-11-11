@@ -4,7 +4,7 @@
     <div v-bind:class="[item.status ? 'done' : 'undone']">
      <span class="fa fa-check" aria-hidden="true"  v-if="!edit" v-on:click="onClickDone(item,index)"></span>
      <button type="button" class="close" v-if="!edit"  v-on:click="deleteEntry(item.id,index)">×</button>
-     <button type="button" class="close" v-if="!edit" v-on:click="editTask()"><i class="fa fa-pencil"></i></button>
+     <button type="button" class="close" v-if="!edit && !item.status " v-on:click="editTask()"><i class="fa fa-pencil"></i></button>
       <span v-if="!edit">task : {{item.name}}
           <p>
            created at : {{item.created_at|datetime}}

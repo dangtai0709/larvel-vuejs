@@ -40248,7 +40248,7 @@ var render = function() {
           )
         : _vm._e(),
       _vm._v(" "),
-      !_vm.edit
+      !_vm.edit && !_vm.item.status
         ? _c(
             "button",
             {
